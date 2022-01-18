@@ -6,6 +6,7 @@ class NotesService {
   }
 
   async getNotes(userId) {
+    console.log(userId);
     const query = {
       text: `SELECT notes.* FROM notes
       LEFT JOIN collaborations ON collaborations.note_id = notes.id
